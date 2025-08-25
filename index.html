@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAPACITI – Tech Career Accelerator</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+  
+  <!-- Google Fonts: Poppins --> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Swiper JS & CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <style> 
+    body { font-family: 'Poppins', sans-serif; } 
+    .text-spacecadet { color: #2B2D42; }
+    .text-salmon { color: #F25251; }
+    .text-purple { color: #6115D0; }
+    .text-pink { color: #FF7EB9; }
+
+    .bg-spacecadet { background-color: #2B2D42; }
+    .bg-salmon { background-color: #F25251; }
+    .bg-purple { background-color: #6115D0; }
+    .bg-pink { background-color: #FF7EB9; }
+
+    .hover-spacecadet:hover { color: #2B2D42; }
+    .hover-salmon:hover { color: #F25251; }
+    .hover-purple:hover { color: #6115D0; }
+    .hover-pink:hover { color: #FF7EB9; }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #6115D0, #FF7EB9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style> 
+</head> 
+
+<body class="bg-white text-spacecadet"> 
+<a href="#main" class="sr-only focus:not-sr-only">Skip to main content</a>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 shadow w-full" data-aos="fade-down">
+  <div class="px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between bg-spacecadet text-white">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-1">
+      <div class="flex items-center gap-3">
+        <img src="Logo.jpg" alt="CAPACITI Logo" class="h-9 w-9 rounded-full object-contain bg-white p-1" />
+        <span class="font-semibold tracking-wide">CAPACITI</span>
+      </div>
+      <span class="font-light text-sm text-pink">Empowering Africa’s next digital leaders</span>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+         <a href="index.html" class="hover-spacecadet">Home</a>
+      <a href="#about" class="hover-salmon">About</a>
+      <a href="#programmes" class="hover-purple">Programmes</a>
+      <a href="#impact" class="hover-pink">Impact</a>
+      <a href="#blog" class="hover-spacecadet">Blog</a>
+      <a href="#news" class="hover-salmon">News & Events</a>
+      <a href="#contact" class="hover-purple">Contact</a>
+    </nav>
+
+    <a href="#opportunities" class="hidden md:block ml-4">
+      <button class="rounded-2xl px-5 py-2 bg-salmon text-white hover:opacity-90 shadow-lg transition">Work With Us</button>
+    </a>
+
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-spacecadet text-white px-6 py-4 space-y-4 backdrop-blur-md transition-all">
+     <a href="index.html" class="hover-spacecadet">Home</a>
+    <a href="#about" class="block hover-salmon">About</a>
+    <a href="#programmes" class="block hover-purple">Programmes</a>
+    <a href="#impact" class="block hover-pink">Impact</a>
+    <a href="#blog" class="block hover-spacecadet">Blog</a>
+    <a href="#news" class="block hover-salmon">News & Events</a>
+    <a href="#contact" class="block hover-purple">Contact</a>
+    <a href="#opportunities" class="block">
+      <button class="w-full rounded-2xl px-5 py-2 bg-salmon text-white hover:opacity-90 shadow-lg transition">Work With Us</button>
+    </a>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({ duration: 1000, once: true });
+
+    new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      speed: 1200,
+      parallax: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+  });
+</script>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide relative flex items-center justify-center" style="height: calc(100vh - 4rem);">
+        <img src="Welcome 1.jpg" alt="CAPACITI Student 1" class="absolute w-full h-full object-cover">
+        <!-- Stronger overlay for readability -->
+        <div class="absolute inset-0 bg-black/50"></div> 
+        <div class="relative max-w-3xl text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 drop-shadow-2xl">
+            Kickstart Your <span class="text-salmon">Tech Career</span>
+          </h1>
+          <p class="text-base sm:text-xl text-gray-100 mb-6 drop-shadow-lg">
+            CAPACITI empowers young professionals with in-demand digital skills and bridges them with top employers. Your journey to success starts here!
+          </p>
+          <a href="#opportunities">
+            <button class="rounded-2xl px-7 py-3 bg-pink text-white font-medium text-lg hover:scale-105 transition shadow-xl">
+              Start Your Journey
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide relative flex items-center justify-center" style="height: calc(100vh - 4rem);">
+        <img src="Welcome 2.jpg" alt="CAPACITI Student 2" class="absolute w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative max-w-3xl text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 drop-shadow-2xl">
+            Learn, <span class="text-purple">Innovate</span>, Succeed
+          </h1>
+          <p class="text-base sm:text-xl text-gray-100 mb-6 drop-shadow-lg">
+            Get mentored by industry leaders and work on real projects that prepare you for meaningful careers in tech.
+          </p>
+          <a href="#about">
+            <button class="rounded-2xl px-7 py-3 bg-salmon text-white font-medium text-lg hover:scale-105 transition shadow-xl">
+              Learn More
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide relative flex items-center justify-center" style="height: calc(100vh - 4rem);">
+        <img src="Welcome 3.jpg" alt="CAPACITI Student 3" class="absolute w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative max-w-3xl text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 drop-shadow-2xl">
+            Your Path to <span class="text-pink">Digital Excellence</span>
+          </h1>
+          <p class="text-base sm:text-xl text-gray-100 mb-6 drop-shadow-lg">
+            Join CAPACITI and gain hands-on experience, career coaching, and networking opportunities that propel your tech career forward.
+          </p>
+          <a href="#programmes">
+            <button class="rounded-2xl px-7 py-3 bg-purple text-white font-medium text-lg hover:scale-105 transition shadow-xl">
+              Explore Programmes
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide relative flex items-center justify-center" style="height: calc(100vh - 4rem);">
+        <img src="Welcome 4.jpg" alt="CAPACITI Student 4" class="absolute w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative max-w-3xl text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 drop-shadow-2xl">
+            Empower Your <span class="text-purple">Digital Future</span>
+          </h1>
+          <p class="text-base sm:text-xl text-gray-100 mb-6 drop-shadow-lg">
+            Collaborate, innovate, and grow with CAPACITI to achieve your career goals in the fast-evolving tech landscape.
+          </p>
+          <a href="#opportunities">
+            <button class="rounded-2xl px-7 py-3 bg-pink text-white font-medium text-lg hover:scale-105 transition shadow-xl">
+              Join Now
+            </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-button-next text-white"></div>
+    <div class="swiper-button-prev text-white"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+</body>
+</html>
+
+  
+<!-- About Section -->
+<section id="about" class="relative py-24 bg-gradient-to-br from-[#2B2D42]/10 via-[#FF7EB9]/10 to-[#6115D0]/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- About Header -->
+    <div class="text-center mb-16" data-aos="fade-down">
+      <h2 class="text-4xl font-bold text-spacecadet mb-4 gradient-text">About CAPACITI</h2>
+      <p class="text-lg text-spacecadet max-w-3xl mx-auto">
+        CAPACITI is Africa’s premier Tech Career Accelerator. We transform talent into professionals ready to innovate, create, and lead in the digital economy. Hands-on projects, mentorship, and industry exposure bridge the gap between learning and impactful careers.
+      </p>
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <!-- Mission -->
+      <div class="p-8 rounded-2xl shadow-lg border bg-purple/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="100">
+        <!-- Icon: Lightning Bolt -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <h3 class="text-xl font-bold text-purple mb-3">Our Mission</h3>
+        <p class="text-spacecadet leading-relaxed">
+          To develop Africa’s young tech professionals through structured programs, mentorship, and workplace-ready projects, preparing them for immediate impact in their careers.
+        </p>
+      </div>
+
+      <!-- Vision -->
+      <div class="p-8 rounded-2xl shadow-lg border bg-salmon/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="200">
+        <!-- Icon: Eye -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-salmon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+        <h3 class="text-xl font-bold text-salmon mb-3">Our Vision</h3>
+        <p class="text-spacecadet leading-relaxed">
+          To be the leading accelerator of digital talent in Africa, enabling thousands of professionals to thrive, innovate, and contribute meaningfully to the continent’s growth.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h3 class="text-3xl font-bold text-spacecadet mb-6 gradient-text">Our Core Values</h3>
+    </div>
+
+    <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Innovation -->
+      <div class="p-6 rounded-2xl shadow-lg border bg-pink/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <!-- Icon: Light Bulb -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3a1 1 0 011 1v3a1 1 0 01-2 0V4a1 1 0 011-1zm-1 11a4 4 0 100-8 4 4 0 000 8zm0 0v4m-2 2h4" />
+        </svg>
+        <h4 class="text-lg font-bold text-pink mb-2">Innovation</h4>
+        <p class="text-spacecadet leading-relaxed">We embrace creativity and foster solutions that shape the future of technology.</p>
+      </div>
+
+      <!-- Excellence -->
+      <div class="p-6 rounded-2xl shadow-lg border bg-purple/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+        <!-- Icon: Star -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.905c.969 0 1.371 1.24.588 1.81l-3.972 2.89a1 1 0 00-.364 1.118l1.518 4.674c.3.921-.755 1.688-1.54 1.118l-3.972-2.89a1 1 0 00-1.176 0l-3.972 2.89c-.784.57-1.838-.197-1.539-1.118l1.518-4.674a1 1 0 00-.364-1.118l-3.972-2.89c-.783-.57-.38-1.81.588-1.81h4.905a1 1 0 00.95-.69l1.518-4.674z" />
+        </svg>
+        <h4 class="text-lg font-bold text-purple mb-2">Excellence</h4>
+        <p class="text-spacecadet leading-relaxed">We aim for the highest standards in learning, mentorship, and career readiness.</p>
+      </div>
+
+      <!-- Collaboration -->
+      <div class="p-6 rounded-2xl shadow-lg border bg-salmon/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+        <!-- Icon: Handshake -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-salmon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18M17 16l4-4m0 0l-4-4m4 4H3" />
+        </svg>
+        <h4 class="text-lg font-bold text-salmon mb-2">Collaboration</h4>
+        <p class="text-spacecadet leading-relaxed">We work together with learners, mentors, and partners to achieve transformative outcomes.</p>
+      </div>
+
+      <!-- Integrity -->
+      <div class="p-6 rounded-2xl shadow-lg border bg-spacecadet/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
+        <!-- Icon: Shield -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-spacecadet" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l8 4v6c0 5.523-4.477 10-10 10S2 17.523 2 12V6l10-4z" />
+        </svg>
+        <h4 class="text-lg font-bold text-spacecadet mb-2">Integrity</h4>
+        <p class="text-spacecadet leading-relaxed">We maintain transparency, honesty, and trust in all our actions.</p>
+      </div>
+
+      <!-- Growth -->
+      <div class="p-6 rounded-2xl shadow-lg border bg-pink/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="500">
+        <!-- Icon: Arrow Up -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7M12 3v18" />
+        </svg>
+        <h4 class="text-lg font-bold text-pink mb-2">Growth</h4>
+        <p class="text-spacecadet leading-relaxed">We enable continuous learning, professional development, and career advancement.</p>
+      </div>
+
+  <!-- Impact -->
+  <div class="p-6 rounded-2xl shadow-lg border bg-purple/10 hover:scale-105 transition-transform flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="600">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-4 text-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v5h-6v-5c0-1.657 1.343-3 3-3z" />
+    </svg>
+    <h4 class="text-lg font-bold text-purple mb-2">Impact</h4>
+    <p class="text-spacecadet leading-relaxed">We create measurable positive outcomes in the lives of learners and the tech ecosystem.</p>
+  </div>
+</div>
+
+    <!-- Team -->
+<div>
+  <h3 class="text-2xl font-bold text-brand text-center mb-8">Meet Our Team</h3>
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+    <!-- Chanel -->
+    <div class="text-center bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+      <img src="Chanel11 1 3.JPG" alt="Chanel" class="w-full h-60 object-cover object-top rounded-lg mb-3">
+      <p class="font-semibold text-brand">Chanel (Engelbrecht) Oldfield</p>
+      <p class="text-sm text-slate-600 mb-3">Head of CAPACITI</p>
+      <div class="flex justify-center gap-4 text-slate-500">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/chaneloldfield/" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hover:text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 
+            2.24 5 5 5h14c2.76 0 5-2.24 
+            5-5v-14c0-2.76-2.24-5-5-5zm-11 
+            19h-3v-10h3v10zm-1.5-11.29c-.96 
+            0-1.75-.79-1.75-1.75s.79-1.75 
+            1.75-1.75 1.75.79 
+            1.75 1.75-.79 1.75-1.75 
+            1.75zm13.5 11.29h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 
+            0-2.16 1.46-2.16 2.96v5.7h-3v-10h2.88v1.36h.04c.4-.76 
+            1.38-1.56 2.84-1.56 3.04 0 3.6 2 
+            3.6 4.6v5.6z"/>
+          </svg>
+        </a>
+              </div>
+    </div>
+
+    <!-- Chesarae -->
+    <div class="text-center bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+      <img src="Chesarae3 1 3.JPG" alt="Chesarae" class="w-full h-60 object-cover object-top rounded-lg mb-3">
+      <p class="font-semibold text-brand">Chesarae K Pillay</p>
+      <p class="text-sm text-slate-600 mb-3">Head of Information Technology Systems & Solutions</p>
+      <div class="flex justify-center gap-4 text-slate-500">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/chesarae/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hover:text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 
+            2.24 5 5 5h14c2.76 0 5-2.24 
+            5-5v-14c0-2.76-2.24-5-5-5zm-11 
+            19h-3v-10h3v10zm-1.5-11.29c-.96 
+            0-1.75-.79-1.75-1.75s.79-1.75 
+            1.75-1.75 1.75.79 
+            1.75 1.75-.79 1.75-1.75 
+            1.75zm13.5 11.29h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 
+            0-2.16 1.46-2.16 2.96v5.7h-3v-10h2.88v1.36h.04c.4-.76 
+            1.38-1.56 2.84-1.56 3.04 0 3.6 2 
+            3.6 4.6v5.6z"/>
+          </svg>
+        </a>
+        
+      </div>
+    </div>
+
+    <!-- Kelly -->
+    <div class="text-center bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+      <img src="Kelly1 1 3.JPG" alt="Kelly" class="w-full h-60 object-cover object-top rounded-lg mb-3">
+      <p class="font-semibold text-brand">Kelly M</p>
+      <p class="text-sm text-slate-600 mb-3">People Development Architect</p>
+      <div class="flex justify-center gap-4 text-slate-500">
+        <a href="https://www.linkedin.com/in/kelly-m-655249158/" target="_blank" aria-label="LinkedIn">
+          <!-- LinkedIn SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hover:text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 
+            2.24 5 5 5h14c2.76 0 5-2.24 
+            5-5v-14c0-2.76-2.24-5-5-5zm-11 
+            19h-3v-10h3v10zm-1.5-11.29c-.96 
+            0-1.75-.79-1.75-1.75s.79-1.75 
+            1.75-1.75 1.75.79 
+            1.75 1.75-.79 1.75-1.75 
+            1.75zm13.5 11.29h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 
+            0-2.16 1.46-2.16 2.96v5.7h-3v-10h2.88v1.36h.04c.4-.76 
+            1.38-1.56 2.84-1.56 3.04 0 3.6 2 
+            3.6 4.6v5.6z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Nash -->
+    <div class="text-center bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+      <img src="Nash4 1 3.JPG" alt="Nash" class="w-full h-60 object-cover object-top rounded-lg mb-3">
+      <p class="font-semibold text-brand">Nasheeta Du Toit</p>
+      <p class="text-sm text-slate-600 mb-3">Head OF Brand</p>
+      <div class="flex justify-center gap-4 text-slate-500">
+        <a href="https://www.linkedin.com/in/nasheeta-du-toit-90641039/?originalSubdomain=za" target="_blank" aria-label="LinkedIn">
+          <!-- LinkedIn SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hover:text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 
+            2.24 5 5 5h14c2.76 0 5-2.24 
+            5-5v-14c0-2.76-2.24-5-5-5zm-11 
+            19h-3v-10h3v10zm-1.5-11.29c-.96 
+            0-1.75-.79-1.75-1.75s.79-1.75 
+            1.75-1.75 1.75.79 
+            1.75 1.75-.79 1.75-1.75 
+            1.75zm13.5 11.29h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 
+            0-2.16 1.46-2.16 2.96v5.7h-3v-10h2.88v1.36h.04c.4-.76 
+            1.38-1.56 2.84-1.56 3.04 0 3.6 2 
+            3.6 4.6v5.6z"/>
+          </svg>
+        </a>
+  
+  </div>
+</div>
+</section>
+
+<!-- CapaCiTi History Section-->
+<section class="relative py-20 bg-center bg-cover font-[Poppins]" style="background-image: url('impact3.jpg');">
+  <!-- Pink Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-pink-200/90 to-pink-300/70 backdrop-blur-sm"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Title -->
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-[#F25251] to-pink-600 bg-clip-text text-transparent">
+      The History of CapaCiTi
+    </h2>
+
+    <!-- Timeline -->
+    <div class="relative flex flex-col md:flex-row md:justify-center">
+      <div class="flex flex-col space-y-16 md:w-2/3 relative">
+
+        <!-- Connector Line -->
+        <div class="absolute left-3 top-0 bottom-0 w-1 bg-pink-400/60 rounded-full"></div>
+
+        <!-- 2010 -->
+        <div class="flex items-start relative group animate-fadeIn">
+          <div class="w-8 h-8 bg-[#F25251] rounded-full z-10 shadow-md border-4 border-white"></div>
+          <div class="ml-6 p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-xl hover:shadow-2xl transition">
+            <h3 class="font-semibold text-lg text-[#F25251] mb-2">2010: CapaCiTi Established</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              CapaCiTi was established as a digital skills accelerator by CiTi, South Africa's first technology startup incubator. It aimed to bridge the digital skills gap and empower youth in the tech industry.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="flex items-start relative group animate-fadeIn delay-200">
+          <div class="w-8 h-8 bg-[#F25251] rounded-full z-10 shadow-md border-4 border-white"></div>
+          <div class="ml-6 p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-xl hover:shadow-2xl transition">
+            <h3 class="font-semibold text-lg text-[#F25251] mb-2">2018: Expansion Nationwide</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Recognizing the need for wider impact, CapaCiTi expanded its programs to support youth across South Africa and on a Pan-African scale.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2019–2021 -->
+        <div class="flex items-start relative group animate-fadeIn delay-400">
+          <div class="w-8 h-8 bg-[#F25251] rounded-full z-10 shadow-md border-4 border-white"></div>
+          <div class="ml-6 p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-xl hover:shadow-2xl transition">
+            <h3 class="font-semibold text-lg text-[#F25251] mb-2">2019–2021: Thousands of Opportunities Created</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Over 3,500 work opportunities were created in the digital economy for South African youth, solidifying CapaCiTi as a leading digital skills accelerator.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="flex items-start relative group animate-fadeIn delay-600">
+          <div class="w-8 h-8 bg-[#F25251] rounded-full z-10 shadow-md border-4 border-white"></div>
+          <div class="ml-6 p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-xl hover:shadow-2xl transition">
+            <h3 class="font-semibold text-lg text-[#F25251] mb-2">2024: Tech Career Accelerator Launched</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              CapaCiTi launched a tech career accelerator in Gqeberha, Eastern Cape, empowering local businesses and youth with advanced digital skills training.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Video link -->
+    <div class="text-center mt-16">
+      <a href="https://www.youtube.com/watch?v=T6tDCv623-A" target="_blank" 
+         class="inline-block bg-[#F25251] text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:shadow-xl transition">
+        🎥 Watch the full CapaCiTi history video
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Animation keyframes -->
+<style>
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+</style>
+
+
+<!-- Partners & Funders -->
+    <h3 class="text-2xl sm:text-3xl font-bold text-brand text-center mb-12">
+      Our Partners & Funders
+    </h3>
+
+    <div class="overflow-hidden relative border rounded-xl shadow bg-white p-6 group">
+      <div class="flex gap-10 animate-scroll group-hover:pause-scroll">
+        <img src="sa youth.png" class="h-16 w-auto object-contain" alt="Partner 1">
+        <img src="absa.png" class="h-16 w-auto object-contain" alt="Partner 2">
+        <img src="compTIA.png" class="h-16 w-auto object-contain" alt="Partner 3">
+        <img src="uvu bio.png" class="h-16 w-auto object-contain" alt="Partner 4">
+        <img src="salesforce.png" class="h-16 w-auto object-contain" alt="Partner 5">
+        <img src="accenture.png" class="h-16 w-auto object-contain" alt="Partner 6">
+        <img src="cousera.png" class="h-16 w-auto object-contain" alt="Partner 7">
+        <img src="the jobs fund.png" class="h-16 w-auto object-contain" alt="Partner 8">
+        <img src="jp morgan.png" class="h-16 w-auto object-contain" alt="Partner 9">
+        <img src="sap.jpg" class="h-16 w-auto object-contain" alt="Partner 10">
+        <img src="ardaghgroup.png" class="h-16 w-auto object-contain" alt="Partner 11">
+        <img src="uvu.png" class="h-16 w-auto object-contain" alt="Partner 12">
+        <img src="microsoft.png" class="h-16 w-auto object-contain" alt="Partner 13">
+        <img src="aws.png" class="h-16 w-auto object-contain" alt="Partner 14">
+        <img src="mictseta.jpg" class="h-16 w-auto object-contain" alt="Partner 15">
+
+        <!-- Repeat logos for infinite loop -->
+        <img src="sa youth.png" class="h-16 w-auto object-contain" alt="Partner 1">
+        <img src="absa.png" class="h-16 w-auto object-contain" alt="Partner 2">
+        <img src="compTIA.png" class="h-16 w-auto object-contain" alt="Partner 3">
+        <img src="uvu bio.png" class="h-16 w-auto object-contain" alt="Partner 4">
+        <img src="salesforce.png" class="h-16 w-auto object-contain" alt="Partner 5">
+        <img src="accenture.png" class="h-16 w-auto object-contain" alt="Partner 6">
+        <img src="cousera.png" class="h-16 w-auto object-contain" alt="Partner 7">
+        <img src="the jobs fund.png" class="h-16 w-auto object-contain" alt="Partner 8">
+        <img src="jp morgan.png" class="h-16 w-auto object-contain" alt="Partner 9">
+        <img src="sap.jpg" class="h-16 w-auto object-contain" alt="Partner 10">
+        <img src="ardaghgroup.png" class="h-16 w-auto object-contain" alt="Partner 11">
+        <img src="uvu.png" class="h-16 w-auto object-contain" alt="Partner 12">
+        <img src="microsoft.png" class="h-16 w-auto object-contain" alt="Partner 13">
+        <img src="aws.png" class="h-16 w-auto object-contain" alt="Partner 14">
+        <img src="mictseta.jpg" class="h-16 w-auto object-contain" alt="Partner 15">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+.pause-scroll {
+  animation-play-state: paused !important;
+}
+</style>
+
+<!-- Programmes -->
+<section id="programmes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" style="background-color:#6115D0;"> 
+  <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Programmes</h2> 
+  <p class="text-gray-200 mb-8">Explore our core digital training programmes designed to accelerate your career.</p> 
+  
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"> 
+    <!-- Data & Analytics -->
+    <div class="p-6 border rounded-2xl shadow-sm bg-white hover:shadow-lg hover:-translate-y-1 transition"> 
+      <div class="flex items-center gap-3 mb-3"> 
+        <span class="p-3 rounded-full bg-[#6115D0]/10 text-[#6115D0]">📊</span> 
+        <h3 class="font-bold text-brand">Data & Analytics</h3> 
+      </div> 
+      <p class="text-slate-600 text-sm">Training in data wrangling, dashboards, and storytelling.</p> 
+      <button onclick="document.getElementById('modal-data').classList.remove('hidden')" class="mt-3 text-accent text-sm hover:underline">Learn More</button>
+    </div>
+    
+    <!-- Cloud & DevOps -->
+    <div class="p-6 border rounded-2xl shadow-sm bg-white hover:shadow-lg hover:-translate-y-1 transition"> 
+      <div class="flex items-center gap-3 mb-3"> 
+        <span class="p-3 rounded-full bg-[#6115D0]/10 text-[#6115D0]">☁️</span> 
+        <h3 class="font-bold text-brand">Cloud & DevOps</h3> 
+      </div> 
+      <p class="text-slate-600 text-sm">Cloud fundamentals, CI/CD pipelines, and containerisation.</p> 
+      <button onclick="document.getElementById('modal-cloud').classList.remove('hidden')" class="mt-3 text-accent text-sm hover:underline">Learn More</button>
+    </div>
+    
+    <!-- Software Engineering -->
+    <div class="p-6 border rounded-2xl shadow-sm bg-white hover:shadow-lg hover:-translate-y-1 transition"> 
+      <div class="flex items-center gap-3 mb-3"> 
+        <span class="p-3 rounded-full bg-[#6115D0]/10 text-[#6115D0]">💻</span> 
+        <h3 class="font-bold text-brand">Software Engineering</h3> 
+      </div> 
+      <p class="text-slate-600 text-sm">Modern web stacks, teamwork sprints, and code quality.</p> 
+      <button onclick="document.getElementById('modal-software').classList.remove('hidden')" class="mt-3 text-accent text-sm hover:underline">Learn More</button>
+    </div>
+    
+    <!-- Digital Workplace -->
+    <div class="p-6 border rounded-2xl shadow-sm bg-white hover:shadow-lg hover:-translate-y-1 transition"> 
+      <div class="flex items-center gap-3 mb-3"> 
+        <span class="p-3 rounded-full bg-[#6115D0]/10 text-[#6115D0]">📱</span> 
+        <h3 class="font-bold text-brand">Digital Workplace</h3> 
+      </div> 
+      <p class="text-slate-600 text-sm">Business apps, productivity tooling, and workflow automation.</p> 
+      <button onclick="document.getElementById('modal-digital').classList.remove('hidden')" class="mt-3 text-accent text-sm hover:underline">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<!-- Data Modal -->
+<div id="modal-data" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-xl shadow-lg max-w-md relative">
+    <button onclick="document.getElementById('modal-data').classList.add('hidden')" class="absolute top-2 right-3 text-slate-600">✖</button>
+    <h3 class="font-bold text-brand mb-3">Data & Analytics</h3>
+    <p class="text-slate-600 text-sm">Develop data wrangling, visualization, dashboards, and storytelling skills to help organizations make data-driven decisions.</p>
+  </div>
+</div>
+
+<!-- Cloud Modal -->
+<div id="modal-cloud" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-xl shadow-lg max-w-md relative">
+    <button onclick="document.getElementById('modal-cloud').classList.add('hidden')" class="absolute top-2 right-3 text-slate-600">✖</button>
+    <h3 class="font-bold text-brand mb-3">Cloud & DevOps</h3>
+    <p class="text-slate-600 text-sm">Learn cloud fundamentals, CI/CD pipelines, infrastructure as code, and containerisation for scalable solutions.</p>
+  </div>
+</div>
+
+<!-- Software Modal -->
+<div id="modal-software" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-xl shadow-lg max-w-md relative">
+    <button onclick="document.getElementById('modal-software').classList.add('hidden')" class="absolute top-2 right-3 text-slate-600">✖</button>
+    <h3 class="font-bold text-brand mb-3">Software Engineering</h3>
+    <p class="text-slate-600 text-sm">Master full-stack development with modern frameworks, agile teamwork, and best practices in code quality.</p>
+  </div>
+</div>
+
+<!-- Digital Modal -->
+<div id="modal-digital" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-xl shadow-lg max-w-md relative">
+    <button onclick="document.getElementById('modal-digital').classList.add('hidden')" class="absolute top-2 right-3 text-slate-600">✖</button>
+    <h3 class="font-bold text-brand mb-3">Digital Workplace</h3>
+    <p class="text-slate-600 text-sm">Get skilled in business productivity apps, workflow automation, and collaboration tools for the digital workplace.</p>
+  </div>
+</div>
+
+<!-- Impact Section -->
+<section id="impact" class="relative py-16"
+         style="
+           background-color: #0B1E4F; /* dark blue base */
+           background-image: linear-gradient(rgba(11,30,79,0.7), rgba(11,30,79,0.7)), url('impact.jpg');
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center;
+         ">
+  <div class="absolute inset-0 bg-black/20"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-sans text-white">
+
+    <!-- Section Header -->
+    <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12">
+      Our Impact
+    </h2>
+
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center mb-16">
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-bold text-[#F25251] mb-2 counter" data-target="15">0</h3>
+        <p class="text-gray-200">Cohorts Trained</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-bold text-[#F25251] mb-2 counter" data-target="3500">0</h3>
+        <p class="text-gray-200">Graduates Empowered</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-bold text-[#F25251] mb-2 counter" data-target="2500">0</h3>
+        <p class="text-gray-200">Job Placements</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-bold text-[#F25251] mb-2 counter" data-target="47">0</h3>
+        <p class="text-gray-200">Female Participants (%)</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-bold text-[#F25251] mb-2 counter" data-target="53">0</h3>
+        <p class="text-gray-200">Male Participants (%)</p>
+      </div>
+    </div>
+
+    <!-- Graph Section -->
+    <div class="mb-16 max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+      <h3 class="text-2xl font-bold mb-6 text-center">Our Stats Overview</h3>
+      <canvas id="impactChart" class="w-full h-64"></canvas>
+    </div>
+
+    <!-- Case Studies -->
+    <div class="mb-16">
+      <h3 class="text-3xl font-bold text-center mb-8">Success Stories</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 hover:scale-105 transition transform">
+          <h4 class="font-bold text-[#F25251] mb-4 text-lg">From Learner to Software Engineer</h4>
+          <p class="text-gray-200 text-sm">
+            Thandi, who joined CapaCiTi’s coding programme with no prior experience, now works as a junior developer at a leading fintech company.
+          </p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 hover:scale-105 transition transform">
+          <h4 class="font-bold text-[#F25251] mb-4 text-lg">Corporate Partnership with Microsoft</h4>
+          <p class="text-gray-200 text-sm">
+            Through our partnership with Microsoft, 120 learners completed an Azure Cloud bootcamp. Over 85% secured internships.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Carousel -->
+    <div class="mb-16">
+      <h3 class="text-3xl font-bold text-center mb-8">What Our Partners Say</h3>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-white/10 backdrop-blur-md rounded-2xl shadow p-8 flex flex-col items-center text-center space-y-3">
+            <p class="text-gray-200 italic text-sm">
+              "CapaCiTi has transformed the way we recruit talent. Their graduates come prepared with practical skills."
+            </p>
+            <h4 class="font-bold text-[#F25251]">Jane Doe</h4>
+            <p class="text-gray-400 text-xs">CEO, Local Startup</p>
+          </div>
+          <div class="swiper-slide bg-white/10 backdrop-blur-md rounded-2xl shadow p-8 flex flex-col items-center text-center space-y-3">
+            <p class="text-gray-200 italic text-sm">
+              "The mentorship and career support CapaCiTi offers is unmatched."
+            </p>
+            <h4 class="font-bold text-[#F25251]">John Smith</h4>
+            <p class="text-gray-400 text-xs">HR Manager, TechCorp</p>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Scripts -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script>
+  // Swiper
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    autoplay: { delay: 5000, disableOnInteraction: false },
+  });
+
+  // Counter Animation on Scroll
+  const counters = document.querySelectorAll('.counter');
+  let countersStarted = false;
+  const metricsRow = document.querySelector('#impact .grid');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !countersStarted) {
+        counters.forEach(counter => {
+          counter.innerText = '0';
+          const target = +counter.getAttribute('data-target');
+          const increment = target / 200;
+          const updateCount = () => {
+            let current = +counter.innerText.replace(/,/g, '');
+            if (current < target) {
+              counter.innerText = Math.ceil(current + increment).toLocaleString();
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = target.toLocaleString();
+            }
+          };
+          updateCount();
+        });
+        countersStarted = true;
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(metricsRow);
+
+  // Chart.js Graph
+  const ctx = document.getElementById('impactChart').getContext('2d');
+  const impactChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Cohorts', 'Graduates', 'Placements', 'Female (%)', 'Male (%)'],
+      datasets: [{
+        label: 'Impact Stats',
+        data: [15, 3500, 2500, 47, 53],
+        backgroundColor: ['#F25251', '#4DB6FF', '#FFB74D', '#AB47BC', '#26A69A'],
+        borderRadius: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          color: '#ffffff',
+          anchor: 'end',
+          align: 'end',
+          font: { size: 14, weight: 'bold' },
+          formatter: function(value) { return value.toLocaleString(); }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#ffffff', font: { size: 16, weight: 'bold' } },
+          grid: { color: 'rgba(255,255,255,0.2)' }
+        },
+        y: {
+          ticks: { color: '#ffffff', font: { size: 16, weight: 'bold' } },
+          grid: { color: 'rgba(255,255,255,0.2)' },
+          beginAtZero: true
+        }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+</script>
+
+    
+  <!-- Blog -->
+<section id="blog" class="bg-[#F8FAFC] py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-bold text-spacecadet mb-12 text-center">Latest from Our Blog</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Blog Post 1 -->
+      <div class="rounded-2xl border border-spacecadet shadow-sm hover:shadow-lg hover:scale-105 transition transform bg-white overflow-hidden">
+        <img src="blog1.jpg" alt="Blog 1" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-spacecadet mb-2">How to Kickstart Your Tech Career</h3>
+          <p class="text-spacecadet text-sm mb-4">Tips from CAPACITI mentors on getting started in the digital economy.</p>
+          <button onclick="openBlog('modal-blog1')" class="bg-spacecadet text-white px-4 py-2 rounded-xl hover:opacity-90 font-medium">Read More →</button>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="rounded-2xl border border-salmon shadow-sm hover:shadow-lg hover:scale-105 transition transform bg-white overflow-hidden">
+        <img src="blog2.jpg" alt="Blog 2" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-salmon mb-2">The Future of Cloud & DevOps</h3>
+          <p class="text-salmon text-sm mb-4">Why cloud and automation are key for South Africa’s growing tech workforce.</p>
+          <button onclick="openBlog('modal-blog2')" class="bg-salmon text-white px-4 py-2 rounded-xl hover:opacity-90 font-medium">Read More →</button>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="rounded-2xl border border-purple shadow-sm hover:shadow-lg hover:scale-105 transition transform bg-white overflow-hidden">
+        <img src="blog3.jpg" alt="Blog 3" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-purple mb-2">Graduate Success Stories</h3>
+          <p class="text-purple text-sm mb-4">Hear from our graduates about their journey from training to employment.</p>
+          <button onclick="openBlog('modal-blog3')" class="bg-purple text-white px-4 py-2 rounded-xl hover:opacity-90 font-medium">Read More →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Blog Modals -->
+<div id="modal-blog1" class="modal hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-xl shadow-lg max-w-2xl w-full max-h-[80vh] relative flex flex-col">
+    <button onclick="closeBlog('modal-blog1')" class="absolute top-3 right-4 text-spacecadet text-xl">✖</button>
+    <div class="p-6 overflow-y-auto">
+      <h3 class="font-bold text-spacecadet mb-3">How to Kickstart Your Tech Career</h3>
+      <p class="text-spacecadet text-sm leading-relaxed mb-4">
+        Here you can write the full blog article content. Add multiple paragraphs, 
+        images, or even embed a video if needed.
+      </p>
+      <p class="text-spacecadet text-sm leading-relaxed">
+        Example extra content: Pellentesque vitae ligula sit amet magna tincidunt tincidunt.
+      </p>
+    </div>
+    <div class="flex justify-between p-4 border-t">
+      <button onclick="openBlog('modal-blog3')" class="text-spacecadet hover:text-pink">← Previous</button>
+      <button onclick="openBlog('modal-blog2')" class="text-spacecadet hover:text-pink">Next →</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-blog2" class="modal hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-xl shadow-lg max-w-2xl w-full max-h-[80vh] relative flex flex-col">
+    <button onclick="closeBlog('modal-blog2')" class="absolute top-3 right-4 text-salmon text-xl">✖</button>
+    <div class="p-6 overflow-y-auto">
+      <h3 class="font-bold text-salmon mb-3">The Future of Cloud & DevOps</h3>
+      <p class="text-salmon text-sm leading-relaxed mb-4">
+        Full details of your blog post go here. Add diagrams, case studies, and industry insights.
+      </p>
+      <p class="text-salmon text-sm leading-relaxed">
+        Extra content for scroll test. Mauris posuere sapien a orci malesuada, nec scelerisque nunc faucibus.
+      </p>
+    </div>
+    <div class="flex justify-between p-4 border-t">
+      <button onclick="openBlog('modal-blog1')" class="text-salmon hover:text-pink">← Previous</button>
+      <button onclick="openBlog('modal-blog3')" class="text-salmon hover:text-pink">Next →</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-blog3" class="modal hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-xl shadow-lg max-w-2xl w-full max-h-[80vh] relative flex flex-col">
+    <button onclick="closeBlog('modal-blog3')" class="absolute top-3 right-4 text-purple text-xl">✖</button>
+    <div class="p-6 overflow-y-auto">
+      <h3 class="font-bold text-purple mb-3">Graduate Success Stories</h3>
+      <p class="text-purple text-sm leading-relaxed mb-4">
+        Add your graduate testimonials, photos, and success stories here.
+      </p>
+      <p class="text-purple text-sm leading-relaxed">
+        Additional details for scroll test. Donec volutpat sem nec magna pretium.
+      </p>
+    </div>
+    <div class="flex justify-between p-4 border-t">
+      <button onclick="openBlog('modal-blog2')" class="text-purple hover:text-pink">← Previous</button>
+      <button onclick="openBlog('modal-blog1')" class="text-purple hover:text-pink">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function openBlog(id) {
+    document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+  }
+  function closeBlog(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+</script>
+
+
+    
+
+<!-- News & Events Section with Tabs and Background Color -->
+<section id="news" class="bg-[#F8FAFC] py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-spacecadet mb-12 text-center">News & Events</h2>
+
+    <!-- Tabs Navigation -->
+    <div class="flex justify-center mb-12 space-x-4">
+      <button class="tab-btn px-6 py-2 rounded-2xl bg-purple text-white font-semibold" data-tab="latest">Latest News</button>
+      <button class="tab-btn px-6 py-2 rounded-2xl bg-gray-300 text-spacecadet font-semibold" data-tab="past">Past Events</button>
+      <button class="tab-btn px-6 py-2 rounded-2xl bg-gray-300 text-spacecadet font-semibold" data-tab="press">Press & Media</button>
+    </div>
+
+    <!-- Tabs Content -->
+    <div id="tabs-content">
+
+      <!-- Latest News -->
+      <div class="tab-content" id="latest">
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Latest Event 1 -->
+          <div class="p-6 rounded-2xl bg-[#F5F7FF] border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col items-start">
+            <div class="flex items-center gap-3 mb-4">
+              <svg class="w-8 h-8 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m-4-8L8 10l4 2"/>
+              </svg>
+              <span class="font-semibold text-spacecadet">Aug 13, 2025</span>
+            </div>
+            <h3 class="font-bold text-spacecadet mb-2">UVU Bio Leads National Research Initiative in Higher Education</h3>
+            <p class="text-spacecadet text-sm mb-3">
+              UVU Bio has been appointed by the DSTI and UNDP to spearhead a national research initiative aimed at transforming innovation and entrepreneurship within South Africa's higher education sector.
+            </p>
+            <a href="https://uvuafrica.com/news/uvu-bio-takes-the-lead-in-transforming-innovation-in-sas-higher-education/" target="_blank" class="text-purple font-medium hover:underline mt-auto">Read Article →</a>
+          </div>
+
+          <!-- Latest Event 2 -->
+          <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col items-start">
+            <div class="flex items-center gap-3 mb-4">
+              <svg class="w-8 h-8 text-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6l-6 4.5v9l6-4.5 6 4.5v-9L12 6z"/>
+              </svg>
+              <span class="font-semibold text-spacecadet">Aug 2025</span>
+            </div>
+            <h3 class="font-bold text-spacecadet mb-2">Becoming the Person I Needed</h3>
+            <a href="https://uvuafrica.com/blog/becoming-the-person-i-needed" target="_blank" class="text-pink font-medium hover:underline mt-auto">Read Article →</a>
+          </div>
+
+          <!-- Latest Event 3 -->
+          <div class="p-6 rounded-2xl bg-[#FFF5F5] border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col items-start">
+            <div class="flex items-center gap-3 mb-4">
+              <svg class="w-8 h-8 text-salmon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v6m0 0h4m-4 0H8m4-6V6m0 0h4m-4 0H8"/>
+              </svg>
+              <span class="font-semibold text-spacecadet">Aug 13, 2025</span>
+            </div>
+            <h3 class="font-bold text-spacecadet mb-2">UVU Africa welcomes Mamongae Mahlare to Board of Directors</h3>
+            <p class="text-spacecadet text-sm mb-3">
+              UVU Africa celebrates 25 years of advancing inclusive innovation and has been recognised among the Financial Times Top 200 Fastest-Growing Companies in Africa. 
+            </p>
+            <a href="https://uvuafrica.com/blog/uvu-africa-welcomes-mamongae-mahlare-to-board-of-directors/" target="_blank" class="text-salmon font-medium hover:underline mt-auto">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Past Events -->
+      <div class="tab-content hidden" id="past">
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Past Event 1 -->
+          <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+            <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-purple rounded-full mb-3">Oct 31, 2024</span>
+            <h3 class="font-bold text-spacecadet mb-2">CAPACITI Launches Tech Career Accelerator in Gqeberha</h3>
+            <p class="text-slate-600 text-sm mb-4">CAPACITI has launched a Tech Career Accelerator in Gqeberha, Eastern Cape, providing local youth with access to cutting-edge digital skills training.</p>
+            <a href="https://uvuafrica.com/news/capaciti-launches-tech-career-accelerator-in-gqeberha-eastern-cape/" target="_blank" class="text-purple font-medium hover:underline mt-auto">Learn More →</a>
+          </div>
+          <!-- Past Event 2 -->
+          <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+            <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-pink rounded-full mb-3">Aug 10, 2023</span>
+            <h3 class="font-bold text-spacecadet mb-2">Join CAPACITI's Software Development Programme</h3>
+            <p class="text-slate-600 text-sm mb-4">Embark on a transformative journey with CAPACITI's no-cost, full-time 12-month Software Development Programme.</p>
+            <a href="https://uvuafrica.com/blog/call-for-applications-software-development/" target="_blank" class="text-pink font-medium hover:underline mt-auto">Apply Now →</a>
+          </div>
+          <!-- Past Event 3 -->
+          <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+            <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-salmon rounded-full mb-3">Oct 2024</span>
+            <h3 class="font-bold text-spacecadet mb-2">CAPACITI Graduation: Enabling Women in Tech</h3>
+            <p class="text-slate-600 text-sm mb-4">Congratulations to the 41 incredible women who completed the EWIT programme, empowering them to pursue careers in the tech industry.</p>
+            <a href="https://www.youtube.com/watch?v=ouHWcshhS-s" target="_blank" class="text-salmon font-medium hover:underline mt-auto">Watch the Ceremony →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Press & Media -->
+      <div class="tab-content hidden" id="press">
+        <div class="grid gap-8 md:grid-cols-3">
+        <!-- Media 1 -->
+<div class="p-6 rounded-2xl bg-[#FFFBF5] border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col items-start">
+  <div class="flex items-center gap-3 mb-4">
+    <svg class="w-8 h-8 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2zM8 7h8M8 11h8M8 15h6"/>
+    </svg>
+    <span class="font-semibold text-spacecadet">Aug 2025</span>
+  </div>
+  <h3 class="font-bold text-spacecadet mb-2">CAPACITI and Wipro’s Commitment to Youth Empowerment</h3>
+  <p class="text-spacecadet text-sm mb-3">
+    CAPACITI and Wipro have partnered to empower the next generation with the knowledge and expertise needed in the ever-evolving tech industry. One of the many young people empowered through this partnership is Njabulo Lamula.
+  </p>
+  <a href="https://uvuafrica.com/news/capaciti-and-wipros-commitment-to-youth-empowerment/" target="_blank" class="text-purple font-medium hover:underline mt-auto">Read Article →</a>
+</div>
+
+<!-- Media 2 -->
+<div class="p-6 rounded-2xl bg-[#F5F7FF] border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col items-start">
+  <div class="flex items-center gap-3 mb-4">
+    <svg class="w-8 h-8 text-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6l-6 4.5v9l6-4.5 6 4.5v-9L12 6z"/>
+    </svg>
+    <span class="font-semibold text-spacecadet">Aug 2025</span>
+  </div>
+  <h3 class="font-bold text-spacecadet mb-2">SMMEs Need Skilled Tech Talent to Thrive </h3>
+  <p class="text-spacecadet text-sm mb-3">
+    The State of South African Small Business 2025 report by Xero found that 45% of small businesses identified technology as one of the most valuable contributors to their success over the past year.
+  </p>
+  <a href="https://uvuafrica.com/blog/smmes-need-skilled-tech-talent-to-thrive/" target="_blank" class="text-pink font-medium hover:underline mt-auto">Read Article →</a>
+</div>
+
+
+<!-- Media 3 -->
+<div class="p-6 rounded-2xl bg-[#FFF5F5] border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 flex flex-col items-start">
+  <div class="flex items-center gap-3 mb-4">
+    <svg class="w-8 h-8 text-salmon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v6m0 0h4m-4 0H8m4-6V6m0 0h4m-4 0H8"/>
+    </svg>
+    <span class="font-semibold text-spacecadet">Aug 2025</span>
+  </div>
+  <h3 class="font-bold text-spacecadet mb-2">CAPACITI and Salesforce are Building a Digital Workforce</h3>
+  <p class="text-spacecadet text-sm mb-3">
+    CAPACITI and Salesforce are collaborating to bridge the digital skills gap through Work-Integrated Learning (WIL), combining academic study with practical, on-the-job experience to build a digital workforce.
+  </p>
+  <a href="https://uvuafrica.com/blog/capaciti-and-salesforce-are-building-a-digital-workforce/" target="_blank" class="text-salmon font-medium hover:underline mt-auto">Read Article →</a>
+</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tabs JS -->
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-tab");
+
+        tabContents.forEach(content => {
+          if (content.id === target) content.classList.remove("hidden");
+          else content.classList.add("hidden");
+        });
+
+        tabButtons.forEach(b => b.classList.remove("bg-purple", "text-white"));
+        tabButtons.forEach(b => b.classList.add("bg-gray-300", "text-spacecadet"));
+
+        btn.classList.add("bg-purple", "text-white");
+        btn.classList.remove("bg-gray-300", "text-spacecadet");
+      });
+    });
+  </script>
+</section>
+
+    
+    <!-- Opportunities --> 
+    <section id="opportunities" class="py-20 bg-[#102951] text-white text-center"> 
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Opportunities</h2> 
+        <p class="text-slate-200 mb-8 max-w-2xl mx-auto"> Join our growing network of tech professionals. Explore roles, internships, and career opportunities. </p> 
+        <div class="grid md:grid-cols-3 gap-8"> 
+          <div class="bg-white text-slate-900 p-6 rounded-2xl shadow hover:shadow-lg hover:-translate-y-1 transition"> 
+            <h3 class="font-bold text-brand mb-2">Internships</h3> 
+            <p class="text-sm text-slate-600">Hands-on experience in real-world projects with leading companies.</p> 
+          </div> 
+          <div class="bg-white text-slate-900 p-6 rounded-2xl shadow hover:shadow-lg hover:-translate-y-1 transition"> 
+            <h3 class="font-bold text-brand mb-2">Graduate Roles</h3> 
+            <p class="text-sm text-slate-600">Kickstart your career in software, cloud, data, and more.</p> 
+          </div> 
+          <div class="bg-white text-slate-900 p-6 rounded-2xl shadow hover:shadow-lg hover:-translate-y-1 transition"> 
+            <h3 class="font-bold text-brand mb-2">Employer Partnerships</h3> 
+            <p class="text-sm text-slate-600">Partner with CAPACITI to access trained, job-ready digital talent.</p> 
+          </div> 
+        </div> 
+
+        <!-- Breezy ATS Embed -->
+        <div class="mt-12">
+          <iframe src="https://capaciti.breezy.hr/embed" class="w-full h-[600px] border rounded-xl shadow"></iframe>
+        </div>
+      </div> 
+    </section> 
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-[#F1D1D1]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 rounded-2xl shadow-lg">
+
+      <!-- Contact Form -->
+      <div class="bg-white p-6 rounded-2xl shadow-md border">
+        <h3 class="font-bold mb-4 text-[#1D2951] text-lg">Send us a message</h3>
+        <form id="contact-form" action="https://formspree.io/f/movlozwk" method="POST" class="space-y-4">
+          <input type="hidden" name="_subject" value="New message from your website">
+          <input id="name" type="text" name="name" placeholder="Full name" class="w-full border px-4 py-3 rounded-lg focus:ring-2 focus:ring-[#F25251] outline-none" required />
+          <input id="email" type="email" name="email" placeholder="Email" class="w-full border px-4 py-3 rounded-lg focus:ring-2 focus:ring-[#F25251] outline-none" required />
+          <textarea id="message" rows="4" name="message" placeholder="Your message" class="w-full border px-4 py-3 rounded-lg focus:ring-2 focus:ring-[#F25251] outline-none" required></textarea>
+          <button id="contact-submit" type="submit" class="w-full rounded-xl px-6 py-3 text-white bg-[#F25251] hover:bg-[#1D2951] transition font-medium">
+            Submit
+          </button>
+          <p class="text-green-600 hidden" id="form-success">✅ Thank you! Your message has been sent.</p>
+          <p class="text-red-600 hidden" id="form-error">❌ Something went wrong. Please try again.</p>
+        </form>
+      </div>
+
+      <!-- Contact Details + Map + Socials -->
+      <div class="flex flex-col gap-6">
+
+        <!-- Contact Details -->
+        <div class="flex flex-col justify-center bg-[#1D2951] text-white p-6 rounded-2xl shadow-md border">
+          <h3 class="font-bold text-xl mb-4 text-[#F25251]">Contact Details</h3>
+          <p>📞 +27 (0) 21 003 7579</p>
+          <p>📧 hello@capaciti.org.za</p>
+          <p>📍 Johannesburg, South Africa</p>
+        </div>
+
+<!-- Map -->
+<div class="p-6 bg-white rounded-2xl shadow-lg border flex">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13352.22520246956!2d28.0315866!3d-26.1910625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b1a1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2sHollard+City+Campus%2C+19+Ameshoff+Road%2C+Braamfontein%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1692280913724!5m2!1sen!2sza"
+    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+
+        <!-- Socials -->
+        <div class="mt-6 flex gap-4 justify-center">
+          <a href="https://www.linkedin.com/company/uvu-africa/" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on LinkedIn" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#0A66C2] hover:text-white flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003zM6.556 20.452H4.116V9h2.44v11.452zM5.337 7.433a1.77 1.77 0 110-3.54 1.77 1.77 0 010 3.54zM20.447 20.452h-3.207V14.86c0-1.332-.027-3.046-1.858-3.046-1.861 0-2.146 1.45-2.146 2.948v5.69H9.03V9h3.07v1.561h.044c.428-.81 1.474-1.662 3.036-1.662 3.247 0 3.847 2.138 3.847 4.918v6.635z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/capacitiza" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on Facebook" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#1877F2] hover:text-white flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.446 18.627 0 12 0S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.925-1.956 1.874v2.246h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/capacitiza" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on Instagram" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#E1306C] hover:text-white flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.262 2.242 1.324 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.324 3.608-.975.975-2.242 1.262-3.608 1.324-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.324-.975-.975-1.262-2.242-1.324-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.324-3.608.975-.975 2.242-1.262 3.608-1.324C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.775.13 4.602.428 3.635 1.395 2.668 2.362 2.37 3.535 2.312 4.813 2.254 6.093 2.24 6.502 2.24 9.76v4.48c0 3.258.014 3.667.072 4.947.058 1.277.356 2.45 1.323 3.417.967.967 2.14 1.265 3.417 1.323 1.28.058 1.689.072 4.947.072s3.667-.014 4.947-.072c1.277-.058 2.45-.356 3.417-1.323.967-.967 1.265-2.14 1.323-3.417.058-1.28.072-1.689.072-4.947V9.76c0-3.258-.014-3.667-.072-4.947-.058-1.277-.356-2.45-1.323-3.417C20.398.428 19.225.13 17.948.072 16.668.014 16.259 0 13.001 0H12zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+          </a>
+          <a href="https://x.com/capacitiza" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on X (Twitter)" class="p-3 bg-gray-100 rounded-full transition hover:bg-black hover:text-white flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.314l-7.244 8.274 8.5 11.226H19.5l-6.2-8.18-7.1 8.18H2.886l7.696-8.865L2.5 2.25h5.28l5.593 7.546 4.871-5.546z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCkPukeyUiKb2LWpFcJZp-iQ" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on YouTube" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#FF0000] hover:text-white flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a2.973 2.973 0 00-2.093-2.104C19.396 3.5 12 3.5 12 3.5s-7.396 0-9.405.582A2.973 2.973 0 00.502 6.186 31.84 31.84 0 000 12a31.84 31.84 0 00.502 5.814 2.973 2.973 0 002.093 2.104C4.604 20.5 12 20.5 12 20.5s7.396 0 9.405-.582a2.973 2.973 0 002.093-2.104A31.84 31.84 0 0024 12a31.84 31.84 0 00-.502-5.814zM9.75 15.02V8.98l6.5 3.02-6.5 3.02z"/></svg>
+  </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AJAX Form Script -->
+  <script>
+    const form = document.getElementById('contact-form');
+    const btn = document.getElementById('contact-submit');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      successMsg.classList.add('hidden');
+      errorMsg.classList.add('hidden');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          successMsg.classList.remove('hidden');
+        } else {
+          errorMsg.classList.remove('hidden');
+        }
+      } catch (err) {
+        errorMsg.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit';
+      }
+    });
+  </script>
+</section>
+
+
+<!-- Footer -->
+<footer style="background-color:#1f2937; color:#f9fafb; font-family:'Poppins', sans-serif; padding:30px 20px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+
+    <!-- Quick Links -->
+<div style="flex:1 1 250px;">
+  <h3 style="margin-bottom:10px; font-weight:600;">Quick Links</h3>
+  <nav style="display:flex; flex-direction:column; gap:6px; font-size:14px;">
+    <a href="index.html" style="color:#d1d5db; text-decoration:none; transition:color 0.3s;" 
+       onmouseover="this.style.color='#F25251'" 
+       onmouseout="this.style.color='#d1d5db'">Home</a>
+    <a href="#about" style="color:#d1d5db; text-decoration:none; transition:color 0.3s;" 
+       onmouseover="this.style.color='#F25251'" 
+       onmouseout="this.style.color='#d1d5db'">About</a>
+    <a href="#programmes" style="color:#d1d5db; text-decoration:none; transition:color 0.3s;" 
+       onmouseover="this.style.color='#F25251'" 
+       onmouseout="this.style.color='#d1d5db'">Programmes</a>
+    <a href="#impact" style="color:#d1d5db; text-decoration:none; transition:color 0.3s;" 
+       onmouseover="this.style.color='#F25251'" 
+       onmouseout="this.style.color='#d1d5db'">Impact</a>
+    <a href="#blog" style="color:#d1d5db; text-decoration:none; transition:color 0.3s;" 
+       onmouseover="this.style.color='#F25251'" 
+       onmouseout="this.style.color='#d1d5db'">Blog</a>
+    <a href="#news" style="color:#d1d5db; text-decoration:none; transition:color 0.3s;" 
+       onmouseover="this.style.color='#F25251'" 
+       onmouseout="this.style.color='#d1d5db'">News & Events</a>
+    <a href="#contact" style="color:#d1d5db; text-decoration:none; transition:color 0.3s;" 
+       onmouseover="this.style.color='#F25251'" 
+       onmouseout="this.style.color='#d1d5db'">Contact</a>
+  </nav>
+</div>
+
+
+    <!-- Newsletter -->
+<div style="flex:1 1 300px;">
+  <h3 style="margin-bottom:10px; font-weight:600;">Subscribe to our Newsletter</h3>
+  <form id="newsletter-form" style="display:flex; flex-direction:column; gap:8px;">
+    <input type="email" name="EMAIL" id="newsletter-email" placeholder="Your email" required 
+      style="padding:10px; border-radius:6px; border:none; inline-size:100%; font-family:'Poppins', sans-serif; color:black;">
+    <button type="submit" 
+      style="padding:10px; border:none; border-radius:6px; background-color:#F25251; color:#fff; font-weight:600; cursor:pointer;">
+      Subscribe
+    </button>
+    <div id="newsletter-response" style="font-size:14px; margin-top:8px; color:#F25251;"></div>
+  </form>
+</div>
+
+  </div>
+
+ <!-- Socials -->
+<div class="mt-6 flex gap-4 justify-center">
+  <a href="https://www.linkedin.com/company/uvu-africa/" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on LinkedIn" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#0A66C2] hover:text-white flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-black" viewBox="0 0 24 24"><path d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003zM6.556 20.452H4.116V9h2.44v11.452zM5.337 7.433a1.77 1.77 0 110-3.54 1.77 1.77 0 010 3.54zM20.447 20.452h-3.207V14.86c0-1.332-.027-3.046-1.858-3.046-1.861 0-2.146 1.45-2.146 2.948v5.69H9.03V9h3.07v1.561h.044c.428-.81 1.474-1.662 3.036-1.662 3.247 0 3.847 2.138 3.847 4.918v6.635z"/></svg>
+  
+  </a>
+  <a href="https://www.facebook.com/capacitiza" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on Facebook" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#1877F2] hover:text-white flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-black" viewBox="0 0 24 24"><path d="M24 12.073C24 5.446 18.627 0 12 0S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.925-1.956 1.874v2.246h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+
+  <a href="https://www.instagram.com/capacitiza" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on Instagram" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#E1306C] hover:text-white flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-black" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.262 2.242 1.324 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.324 3.608-.975.975-2.242 1.262-3.608 1.324-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.324-.975-.975-1.262-2.242-1.324-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.324-3.608.975-.975 2.242-1.262 3.608-1.324C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.775.13 4.602.428 3.635 1.395 2.668 2.362 2.37 3.535 2.312 4.813 2.254 6.093 2.24 6.502 2.24 9.76v4.48c0 3.258.014 3.667.072 4.947.058 1.277.356 2.45 1.323 3.417.967.967 2.14 1.265 3.417 1.323 1.28.058 1.689.072 4.947.072s3.667-.014 4.947-.072c1.277-.058 2.45-.356 3.417-1.323.967-.967 1.265-2.14 1.323-3.417.058-1.28.072-1.689.072-4.947V9.76c0-3.258-.014-3.667-.072-4.947-.058-1.277-.356-2.45-1.323-3.417C20.398.428 19.225.13 17.948.072 16.668.014 16.259 0 13.001 0H12zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+
+    <a href="https://x.com/capacitiza" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on X (Twitter)" class="p-3 bg-gray-100 rounded-full transition hover:bg-black hover:text-white flex items-center justify-center">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-blue-600" viewBox="0 0 24 24">
+    <path d="M18.244 2.25h3.314l-7.244 8.274 8.5 11.226H19.5l-6.2-8.18-7.1 8.18H2.886l7.696-8.865L2.5 2.25h5.28l5.593 7.546 4.871-5.546z"/>
+  </svg>
+</a>
+
+<a href="https://www.youtube.com/channel/UCkPukeyUiKb2LWpFcJZp-iQ" target="_blank" rel="noopener noreferrer" aria-label="Capacitiza on YouTube" class="p-3 bg-gray-100 rounded-full transition hover:bg-[#FF0000] hover:text-white flex items-center justify-center">
+  <!-- Visible YouTube Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a2.985 2.985 0 0 0-2.102-2.104C19.39 3.5 12 3.5 12 3.5s-7.39 0-9.396.582a2.985 2.985 0 0 0-2.102 2.104A31.63 31.63 0 0 0 0 12a31.63 31.63 0 0 0 .502 5.814 2.985 2.985 0 0 0 2.102 2.104C4.61 20.5 12 20.5 12 20.5s7.39 0 9.396-.582a2.985 2.985 0 0 0 2.102-2.104A31.63 31.63 0 0 0 24 12a31.63 31.63 0 0 0-.502-5.814zM9.75 15.02V8.98l6 3.02-6 3.02z"/>
+  </svg>
+</a>
+
+</div>
+
+
+
+  <!-- Copyright -->
+  <div style="margin-top:25px; text-align:center; font-size:14px; color:#9ca3af;">
+    &copy; Capaciti 2025. All rights reserved.
+  </div>
+</footer>
+
+<!-- Smooth scroll -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<!-- Working Mailchimp AJAX -->
+<script>
+  document.getElementById('newsletter-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('newsletter-email').value;
+    var responseDiv = document.getElementById('newsletter-response');
+    if(!email) {
+      responseDiv.style.color = "#F25251";
+      responseDiv.textContent = "Please enter a valid email.";
+      return;
+    }
+    var url = "https://gmail.us6.list-manage.com/subscribe/post-json?u=aa3a749145fe99b3ed2fe391c&id=d5b874a8fe&c=mcCallback";
+    window.mcCallback = function(data) {
+      if(data.result === "success"){
+        responseDiv.style.color = "#34D399";
+        responseDiv.textContent = "Thank you for subscribing!";
+      } else {
+        responseDiv.style.color = "#F25251";
+        responseDiv.textContent = data.msg || "Subscription failed. Please try again.";
+      }
+    };
+    var script = document.createElement('script');
+    script.src = url + "&EMAIL=" + encodeURIComponent(email);
+    document.body.appendChild(script);
+  });
+</script>
+
+
+    
+</body> 
+</html>
